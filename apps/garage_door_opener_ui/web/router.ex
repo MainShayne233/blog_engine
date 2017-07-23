@@ -14,12 +14,11 @@ defmodule GarageDoorOpenerUI.Router do
   end
 
   scope "/", GarageDoorOpenerUI do
-    pipe_through :browser # Use the default browser stack
-
+    pipe_through :browser
+    
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
   scope "/api", GarageDoorOpenerUI do
     pipe_through :api
 

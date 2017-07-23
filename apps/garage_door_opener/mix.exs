@@ -62,7 +62,7 @@ defmodule GarageDoorOpener.Mixfile do
   def deps(target) do
     [ system(target),
       {:nerves_runtime, "~> 0.4.2"},
-      {:nerves_networking, "~> 0.6.0"},
+      {:nerves_interim_wifi, "~> 0.2.0"},
       {:garage_door_opener_ui, in_umbrella: true},
     ]
   end
