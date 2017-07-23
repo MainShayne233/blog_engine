@@ -51,8 +51,10 @@ defmodule GarageDoorOpener.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   def deps do
-    [{:nerves, "~> 0.6.1", runtime: false}] ++
-    deps(@target)
+    [
+      {:elixir_ale, "~> 1.0.0"},
+      {:nerves, "~> 0.6.1", runtime: false},
+    ] ++ deps(@target)
   end
 
   # Specify target specific dependencies

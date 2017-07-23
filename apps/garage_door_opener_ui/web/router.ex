@@ -20,7 +20,11 @@ defmodule GarageDoorOpenerUI.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", GarageDoorOpenerUI do
-  #   pipe_through :api
-  # end
+  scope "/api", GarageDoorOpenerUI do
+    pipe_through :api
+
+    scope "/garage_door" do
+      get "/press", GarageDoorController, :press
+    end
+  end
 end
