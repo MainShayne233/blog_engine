@@ -48,3 +48,13 @@ MIX_TARGET=rpi3 mix do deps.get, compile, firmware, firmware.burn
 ```
 
 You should be prompted to confirm the card the firmware will be burned onto, and once that is complete, you should be able to boot up the firmware on your Raspberry Pi 3. The Phoenix application should be running at whatever IP address your Pi is running on.
+
+### Hardware Steps
+
+Now that you have the running app, all that is left connecting your Raspberry Pi 3 to whatever hardware you're going to use to open your garage door. The app is setup up so that when you click/press the button, `PIN 18` on the Raspberry Pi turns on for 1 second, so you just need to set it up so that triggers your garage door to open.
+
+ Personally, I just ripped open my garage door opener's remote, electric-taped down the button on the circuit board, removed the battery, and then connected (also with electric tape) a GPIO and ground pin from the Raspberry Pi to the battery holder, so that when the pin turns on, it's simulates the state of their being a battery while the button is pressed down. This is very crude, but totally works!
+
+ ### Reporting Issues
+
+ If you tried to follow these steps and ran into problems, please open a an issue! I'd love to see what is going on and help you with any problem you might face.
